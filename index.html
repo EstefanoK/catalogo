@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda | Catálogo Innovador</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@200;300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+   
+
+    <!-- Navbar flotante -->
+    <nav class="floating-nav">
+        <a href="#" class="logo">Mi Tienda</a>
+        <div class="nav-links">
+            <a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
+            <div class="cart-icon" id="cartToggle">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title" data-text="EXPLORA LO EXTRAORDINARIO">EXPLORA LO EXTRAORDINARIO</h1>
+            <p class="hero-subtitle">Descubre productos diseñados para inspirar</p>
+            <a href="#productos" class="hero-cta">Ver colección</a>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section class="product-section" id="productos">
+        <div class="section-header">
+            <h2 class="section-title">Nuestra Colección</h2>
+            <p class="section-subtitle">Productos seleccionados para mentes creativas</p>
+        </div>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="tecnologia">Tecnología</button>
+            <button class="filter-btn" data-filter="diseño">Diseño</button>
+            <button class="filter-btn" data-filter="estilo">Estilo de Vida</button>
+        </div>
+        
+        <div class="product-grid" id="productGrid">
+            <!-- Productos se insertarán dinámicamente con JS -->
+        </div>
+    </section>
+
+    <!-- Carrito de Compras -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h3>Tu Carrito</h3>
+                <button class="close-cart" id="closeCart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Ítems del carrito se insertarán dinámicamente -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <p>Tu carrito está vacío</p>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">S/0.00</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificación flotante -->
+    <div class="notification" id="notification"></div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Mi Tienda</h3>
+                <p>Innovación en cada detalle</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                   
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Explorar</h4>
+                <a href="#">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Contacto</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p>mitienda@gmail.com</p>
+                <p>987453501</p>
+                <p>Lima Peru</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Mi Tienda. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
